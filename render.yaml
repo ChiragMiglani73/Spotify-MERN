@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: spotify-backend
+    env: node
+    region: oregon
+    rootDir: spotify-backend
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: PORT
+      - key: MONGO_URI
+      - key: JWT_SECRET

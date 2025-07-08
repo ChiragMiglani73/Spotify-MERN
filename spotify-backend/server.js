@@ -14,7 +14,11 @@ connectCloudinary();
 
 //middleware
 app.use(express.json());
-app.use(cors());
+app.use(cors({
+  origin: 'https://spotify-mern-nine.vercel.app',
+  credentials: true
+}));
+
 
 //Initialising routes
 app.use("/api/song",songRouter)
